@@ -47,11 +47,11 @@ Possible commands:
 	
 	-d: Print only catalogs
 * cfs_rm <OPTIONS> <DESTINATIONS>
-* cfs_create <OPTIONS> <FILE>. Δημιουργία ενός cfs στο αρχείο <FILE>
+* cfs_create <OPTIONS> <FILE>. Create cfs in file <FILE>
 	
-	-bs <BLOCK SIZE>: Καθορισμός μεγέθους μπλοκ δεδομένων σε Bytes
+	-bs <BLOCK SIZE>: Set block size in Bytes
 	
-	-fns <FILENAME SIZE>: Καθορισμός μεγέθους ονόματος αρχείων σε Bytes
+	-fns <FILENAME SIZE>: Set max filename size in Bytes
 * cfs_finish
 * exit
 
