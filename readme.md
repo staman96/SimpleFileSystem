@@ -40,13 +40,13 @@ Possible commands:
 * cfs_mkdir <DIRECTORIES>
 * cfs_touch <OPTIONS> <FILES>
 * cfs_pwd
-* cfs_cd <PATH>
+* cfs_cd <PATH>. Works with <PATH>, <..>, <.>, and in folders like linux file system.
 * cfs_ls <OPTIONS>
 	
 	-l: Print folder metadata
 	
 	-d: Print only catalogs
-* cfs_rm <OPTIONS> <DESTINATIONS>
+* cfs_rm <OPTIONS> <DESTINATIONS>. Works only in local folder, not with path.
 * cfs_create <OPTIONS> <FILE>. Create cfs in file <FILE>
 	
 	-bs <BLOCK SIZE>: Set block size in Bytes
@@ -54,6 +54,19 @@ Possible commands:
 	-fns <FILENAME SIZE>: Set max filename size in Bytes
 * cfs_finish
 * exit
+	
+Also, a log file is created with all the user commands that were used.
+	
+	
+GENERAL INFO:
+	
+* The execution of the container file system starts with the command ./CFSshell in linux terminal. 
+* A makefile is used, so, 'make' is used for compilation and 'make clean' to remove the .o files.
+* I also used Valgrind to check for memory leaks with the command:
+	
+	make clean && make && valgrind -v --leak-check=yes --show-leak-kinds=all --track-fds=yes --track-origins=yes ./CFSshell
+
+and there are no memory leaks.
 
 	
 
