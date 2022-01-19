@@ -23,7 +23,7 @@ MDS Block visualization
  K 	* time_t modificationTime;                   
 |||	* unsigned int numberOfBlocks;               
 |||	* ---------                   
- S 	* max filename bytes(max size of Metadata)				      
+ S 	* max filename bytes				      
  I 	* ---------      
  Z 	* size of filename  
  E 	* blockID (pointing to Data/MDS)          
